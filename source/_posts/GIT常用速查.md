@@ -16,6 +16,16 @@ tags: [Git]
     $ git config --global user.email "email@example.com"
     ```
 
+2. 替换npm源为淘宝镜像
+    
+    `npm config set registry https://registry.npm.taobao.org`
+
+    > 检测是否成功
+    > // 配置后可通过下面方式来验证是否成功
+    > `npm config get registry`
+    > // 或
+    > `npm info express`
+
 2. 创建仓库
 
     - if (想建一个空的本地仓库):
