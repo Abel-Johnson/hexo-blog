@@ -22,7 +22,7 @@ tags: [Linux]
 
 `$ ls --help`
 
-## 有趣的命令
+## 有趣的shell命令
 
 ### banner 字符画
 
