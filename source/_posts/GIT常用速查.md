@@ -17,7 +17,7 @@ tags: [Git]
     ```
 
 2. 替换npm源为淘宝镜像
-    
+   
     `npm config set registry https://registry.npm.taobao.org`
 
     > 检测是否成功
@@ -29,7 +29,7 @@ tags: [Git]
 2. 创建仓库
 
     - if (想建一个空的本地仓库):
-        
+      
         ```bash
         // 想建一个空的本地仓库
         $ mkdir learngit
@@ -40,7 +40,7 @@ tags: [Git]
             
         ```
     - else
- 
+
         ```bash
         git init
         ```
@@ -61,7 +61,7 @@ tags: [Git]
     
 10. SSH警告
     当你第一次使用Git的clone或者push命令连接GitHub时，会得到一个警告：
-     
+    
     > The authenticity of host 'github.com (xx.xx.xx.xx)' can't be established.
     > RSA key fingerprint is xx.xx.xx.xx.xx.
     > Are you sure you want to continue connecting (yes/no)?
@@ -93,11 +93,10 @@ tags: [Git]
 
     `git status => git diff 可以看到底是那些修改`
 
-3. 现在，他就可以在dev上继续修改，然后，时不时地把dev分支push到远程：
+4. 现在，他就可以在dev上继续修改，然后，时不时地把dev分支push到远程：
     - `$ git commit -m "add /usr/bin/env"`
     - `$ git push origin dev`
 
-    
 12. 冲突
     
     `$ git add readme.txt `
@@ -199,6 +198,21 @@ commit相当于一个存档,每当你觉得文件修改到一定程度的时候�
     - [添加公钥以后, 依然无法push](https://www.jianshu.com/p/be58fa27a704)去到`cd /Users/Johnson/.ssh`然后执行`ssh-add id_rsa2(公钥名)` 就可以了
 
     - 若执行`ssh-add /path/to/xxx.pem`是出现这个错误:**Could not open a connection to your authentication agent**，则先执行如下命令即可：`ssh-agent bash`
+
+3. 查看git配置
+
+config 配置指令
+
+```bash
+git config --global user.name "myname"
+git config --global user.email  "test@gmail.com"
+```
+
+config 配置有system级别 global（用户级别） 和local（当前仓库）三个 设置先从system-》global-》local  底层配置会覆盖顶层配置 分别使用--system/global/local 可以定位到配置文件
+
+查看系统config`git config --system --list`
+查看当前用户（global）配置`git config --global  --list`
+查看当前仓库配置信息`git config --local  --list`
 
 ## 快捷命令代替手工撤销
 1. 批量删除branch中新加的文件(untracked files)
