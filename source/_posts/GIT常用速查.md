@@ -252,3 +252,6 @@ Git鼓励大量使用分支：
         5. 上传新命名的本地分支: **git push origin new-local-branch-name: new-local-branch-name**
 
 
+## https vs ssh
+
+`git config --global credential.helper store`记住密码， 防止每次输入用户名密码
