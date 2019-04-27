@@ -274,3 +274,14 @@ cd <New directory where your OLD repo was cloned>
 git remote set-url origin <URL to my NEW repo location>
 git push -f origin
 ```
+
+## git提交后出现nano界面,解决方法
+
+
+这个是使用nano进行编辑提交的页面，退出方法为：
+Ctrl + X然后输入y再然后回车，就可以退出了
+如果你想把默认编辑器换成别的：
+方法一、在GIT配置中设置 core.editor: git config --global core.editor "vim"
+
+
+方法二、编辑~/.gitconfig文件。在core中添加editor = vim。如此以后在使用git的时候就自动使用vim作为编辑器
