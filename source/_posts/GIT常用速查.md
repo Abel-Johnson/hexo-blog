@@ -285,3 +285,32 @@ Ctrl + X然后输入y再然后回车，就可以退出了
 
 
 方法二、编辑~/.gitconfig文件。在core中添加editor = vim。如此以后在使用git的时候就自动使用vim作为编辑器
+
+
+
+
+## TIPS
+
+1. 美化log
+
+    `git log --oneline --decorate --graph`
+
+2. 远程tag的重命名
+
+    1. 第一步: 
+        - 方法一: 本地把老tag push到远程新tag然后清除远程老tag 最后  清除本地老tag
+            
+            ```bash
+            git push origin <refs/tags/old-tag>:<refs/tags/new-tag> :<refs/tags/old-tag> && git tag -d <old-tag>
+            ```
+            
+        - 方法二: 本地重命名 => 删除远程tag => push本地tag
+
+            ```bash
+            git tag new old
+            git tag -d old
+            git push origin :refs/tags/old
+            git push --tags
+            ```
+
+    2. 第二步:拉到错误tag的同事执行`git pull --prune --tags`清除本地和远程相比多余的tag
