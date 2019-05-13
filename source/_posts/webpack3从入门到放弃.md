@@ -9,6 +9,8 @@ tags: [webpack3]
  
 # [Webpack 3，从入门到放弃](https://segmentfault.com/a/1190000010871559)
 
+*网页截图在文件夹里`![](Webpack3.jpg)`*
+
 
 > **Update (2017.8.27)** : 关于 `output.publicPath`、`devServer.contentBase`、`devServer.publicPath`的区别。如下：
 > 

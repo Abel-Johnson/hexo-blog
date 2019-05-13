@@ -314,3 +314,21 @@ Ctrl + X然后输入y再然后回车，就可以退出了
             ```
 
     2. 第二步:拉到错误tag的同事执行`git pull --prune --tags`清除本地和远程相比多余的tag
+
+3. git同步远程已删除的分支和删除本地多余的分支
+
+    - 删除本地多余远程分支`git remote show origin` => `git remote prune origin`
+    - 删除本地多余分支`git branch -D xxx`
+
+
+4. 批量删除本地分支
+    `git branch |grep 'branchName' |xargs git branch -D`
+    这是通过 shell 管道命令来实现的批量删除分支的功能
+
+    > git branch 输出当前分支列表
+    > grep 是对 git branch 的输出结果进行匹配，匹配值当然就是 branchName
+    > xargs 的作用是将参数列表转换成小块分段传递给其他命令
+
+    因此，这条命令的意思就是:
+
+    `从分支列表中匹配到指定分支，然后一个一个(分成小块)传递给删除分支的命令，最后进行删除。`
