@@ -40,6 +40,11 @@ $ hexo deploy
 
 More info: [Deployment](https://hexo.io/docs/deployment.html)
 
+## 清除hexo缓存
+
+``` bash
+$ hexo clean
+```
 
 ## Hexo添加Toc支持，生成文章目录
 
