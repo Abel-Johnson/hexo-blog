@@ -1,7 +1,7 @@
 ---
 title: hexo博客仓库多端克隆
 date: 2019-03-27 01:04:46
-tags: [hexo]
+tags: [Hexo]
 ---
 
 > 提炼出来要点就是:  
