@@ -30,6 +30,12 @@ More info: [Server](https://hexo.io/docs/server.html)
 $ hexo generate
 ```
 
+### 简写  
+
+```bash
+hexo d -g
+```
+
 More info: [Generating](https://hexo.io/docs/generating.html)
 
 ### Deploy to remote sites
