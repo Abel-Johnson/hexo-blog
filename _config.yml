@@ -83,7 +83,7 @@ theme: maupassant
 deploy:
   type: git
   # repo: https://github.com/AJ1219/blog.git
-  repo: git@github.com:AJ1219/blog.git
+  repo: aj1219:AJ1219/blog.git
   branch: gh-pages
 disqus_shortname: your-disqus-shortname
 
