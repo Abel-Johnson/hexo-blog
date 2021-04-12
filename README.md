@@ -2,8 +2,8 @@
 
 ## 由于一台机器要搞两个github账号, 所以需要起别名
 
-1. 修改.ssh/config,  加入别名配置, 
-   - 需要修改  `.ssh/config`()  
+1. 修改.ssh/config,  加入别名配置,
+   - 需要修改  `.ssh/config`()
 
       ``` yml
       #这里是原先使用的帐号(canny09@qq.com)
@@ -31,3 +31,7 @@
     repo: aj1219:AJ1219/blog.git
     branch: gh-pages
     ```
+
+
+
+3. 如果要启动当前项目,记得要手动安装theme(因为theme文件夹比较大, gitignore了) `$ git clone https://github.com/tufu9441/maupassant-hexo.git themes/maupassant`
