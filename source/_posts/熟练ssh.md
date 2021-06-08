@@ -175,6 +175,20 @@ Host 可以帮助你把对应的 IP 变成好记的名字。比如说我在公�
 
 
 ===
+gitlab 官方推荐的
+```shell
+# GitLab.com
+Host gitlab.com
+  Preferredauthentications publickey
+  IdentityFile ~/.ssh/gitlab_com_rsa
+
+# Private GitLab instance
+Host gitlab.company.com
+  Preferredauthentications publickey
+  IdentityFile ~/.ssh/example_com_rsa
+
+```
+
 
 这是我之前的:
 ```shell
